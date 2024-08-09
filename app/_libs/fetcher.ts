@@ -8,7 +8,7 @@ class Fetcher {
 				...options?.headers,
 			},
 			...options,
-		}).then((response) => response.json() as T);
+		}).then((response) => response.json<T>());
 	}
 }
 

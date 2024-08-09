@@ -1,16 +1,8 @@
 import fetcher from "@/app/_libs/fetcher";
+import type { ITodo } from "@/app/_types";
 import View from "@/app/about/[id]/view";
 import type { NextPage } from "next";
 import { cookies } from "next/headers";
-
-export interface ITodo {
-	id: number;
-	title: string;
-	description: string;
-	dueDate: string;
-	priority: string;
-	completed: boolean;
-}
 
 const Page: NextPage<{ params: { id: string } }> = async ({ params }) => {
 	const cookieStore = cookies();

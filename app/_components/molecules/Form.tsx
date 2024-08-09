@@ -1,5 +1,12 @@
 import AtomInput from "@/app/_components/atoms/Input";
-import type { FormHTMLAttributes, InputHTMLAttributes, PropsWithChildren } from "react";
+import AtomTextArea from "@/app/_components/atoms/TextArea";
+
+import type {
+	FormHTMLAttributes,
+	InputHTMLAttributes,
+	PropsWithChildren,
+	TextareaHTMLAttributes,
+} from "react";
 import {
 	type FieldValues,
 	FormProvider,
@@ -33,6 +40,22 @@ const Input = <T extends FieldValues>({
 	return <AtomInput {...rest} {...register(name, options)} />;
 };
 
+const TextArea = <T extends FieldValues>({
+	name,
+	options,
+	...rest
+}: TextareaHTMLAttributes<HTMLTextAreaElement> & {
+	name: Path<T>;
+	options?: RegisterOptions<T>;
+}) => {
+	const {
+		register,
+		formState: { errors },
+	} = useFormContext<T>();
+	return <AtomTextArea {...rest} {...register(name, options)} />;
+};
+
 export default Object.assign(Form, {
 	Input,
+	TextArea,
 });
