@@ -2,9 +2,9 @@
 import { setCookie } from "@/app/_actions";
 import Checkbox from "@/app/_components/atoms/Checkbox";
 import Input from "@/app/_components/atoms/Input";
+import type { ITodo } from "@/app/_types";
 import Link from "next/link";
 import React, { type ChangeEventHandler, type FC, useState, useTransition } from "react";
-import { ITodo } from "@/app/_types";
 
 interface IProps {
 	doneList: string[];

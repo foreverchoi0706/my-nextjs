@@ -2,7 +2,7 @@ import fetcher from "@/app/_libs/fetcher";
 import View from "@/app/view";
 import type { NextPage } from "next";
 import { cookies } from "next/headers";
-import { ITodo } from "@/app/_types";
+import {ITodo} from "@/app/_types";
 
 const Page: NextPage = async () => {
 	const cookieStore = cookies();
