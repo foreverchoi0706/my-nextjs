@@ -9,6 +9,9 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
+			"nursery": {
+				"useSortedClasses": "error",
+			},
 			"a11y": {
 				"all": false
 			},

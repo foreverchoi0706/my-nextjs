@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<html lang="ko">
-			<body style={inter.style} className="p-2 max-w-[600px] my-0 mx-auto">
+			<body style={inter.style} className="mx-auto my-0 max-w-[600px] p-2">
 				<Link href="/">
 					<Typography as="h2" className="p-2 text-center">
 						TODO LIST
