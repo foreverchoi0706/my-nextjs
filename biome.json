@@ -10,7 +10,7 @@
 		"enabled": true,
 		"rules": {
 			"nursery": {
-				"useSortedClasses": "error",
+				"useSortedClasses": "error"
 			},
 			"a11y": {
 				"all": false

@@ -1,15 +1,13 @@
-import React, {
-	type ButtonHTMLAttributes,
-	type FC,
-	type PropsWithChildren,
-} from "react";
+import React, { type ButtonHTMLAttributes, type FC, type PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
-const Button: FC<
-	PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>
-> = ({ children, className, ...rest }) => {
+const Button: FC<PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>> = ({
+	children,
+	className,
+	...rest
+}) => {
 	return (
-		<button className={twMerge("border p-2 rounded", className)} {...rest}>
+		<button className={twMerge("rounded border p-2", className)} {...rest}>
 			{children}
 		</button>
 	);

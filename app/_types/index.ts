@@ -6,3 +6,7 @@ export interface ITodo {
 	priority: string;
 	completed: boolean;
 }
+
+export interface ITodoMemoForm {
+	memo: string;
+}

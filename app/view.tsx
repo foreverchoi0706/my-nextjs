@@ -40,10 +40,10 @@ const View: FC<IProps> = ({ doneList, initialTodoList }) => {
 			<Input onChange={onChangeInput} />
 			<ul className="flex flex-col gap-2">
 				{todoList.map(({ title, id }) => (
-					<li className="bg-gray-400 border p-4 rounded flex justify-between items-center" key={id}>
+					<li className="flex items-center justify-between rounded border bg-gray-400 p-4" key={id}>
 						<Link
-							className="text-white overflow-hidden text-nowrap text-ellipsis "
-							href={`/about/${id}`}
+							className="overflow-hidden text-ellipsis text-nowrap text-white "
+							href={`/todos/${id}`}
 						>
 							{title}
 						</Link>
