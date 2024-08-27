@@ -1,12 +1,10 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
 
 export const config = {
 	matcher: ["/"],
 };
 
-const middleware = (request: NextRequest) => {
-	console.log(request);
+const middleware = () => {
 	return NextResponse.next();
 };
 

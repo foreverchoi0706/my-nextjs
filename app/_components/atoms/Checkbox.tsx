@@ -9,7 +9,7 @@ const Checkbox = forwardRef<
 		<input
 			type="checkbox"
 			ref={ref}
-			className={twMerge("w-4 h-4 bg-gray-100", className)}
+			className={twMerge("h-4 w-4 bg-gray-100", className)}
 			{...rest}
 		/>
 	);

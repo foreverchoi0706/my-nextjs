@@ -1,4 +1,4 @@
-import fetcher from "@/app/_libs/fetcher";
+import Fetcher from "@/app/_libs/Fetcher";
 import type { ITodo } from "@/app/_types";
 import View from "@/app/todos/[id]/view";
 import { Effect } from "effect";
@@ -10,14 +10,15 @@ const Page: NextPage<{ params: { id: string } }> = async ({ params }) => {
 	const cookieStore = cookies();
 	const doneList = JSON.parse(cookieStore.get("doneList")?.value || "[]") as string[];
 	const memo = cookieStore.get(params.id)?.value || "";
-	return fetcher
-		.get<ITodo>(`/todos/${params.id}`)
+	return Fetcher.get<ITodo>(`/todos/${params.id}`)
 		.then(async (effect) => {
 			const response = await Effect.runPromise(effect);
-			console.log(response);
 			return <View todo={response} doneList={doneList} memo={memo} />;
 		})
-		.catch(() => notFound());
+		.catch((e) => {
+			console.log("ERROR", e);
+			notFound();
+		});
 };
 
 export default Page;

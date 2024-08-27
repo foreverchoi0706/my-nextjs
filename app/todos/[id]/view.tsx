@@ -16,7 +16,6 @@ interface IProps {
 }
 
 const View: FC<IProps> = ({ todo, doneList, memo }) => {
-	console.log(todo);
 	const id = todo.id.toString();
 	const todoSet = new Set<string>(doneList);
 	const form = useForm<ITodoMemoForm>({
