@@ -35,6 +35,7 @@ const View: FC<IProps> = ({ doneList, initialTodoList }) => {
 		});
 	};
 
+	console.log("213");
 	return (
 		<main className="flex flex-col gap-2">
 			<Input onChange={onChangeInput} />

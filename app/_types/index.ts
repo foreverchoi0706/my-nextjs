@@ -10,3 +10,8 @@ export interface ITodo {
 export interface ITodoMemoForm {
 	memo: string;
 }
+
+export interface ILoginForm {
+	id: string;
+	password: string;
+}

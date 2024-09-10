@@ -7,14 +7,7 @@ class Fetcher {
 		const input = path.includes("https://") ? path : this.baseUrl + path;
 		return Effect.tryPromise<T, Error>({
 			try: async () => {
-				const response = await fetch(input, {
-					headers: {
-						"Content-Type": "application/json",
-						...options?.headers,
-					},
-					credentials: "include",
-					...options,
-				});
+				const response = await fetch(input, options);
 				return response.json<T>();
 			},
 			catch: (e) => {

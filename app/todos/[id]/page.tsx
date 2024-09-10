@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 
 const Page: NextPage<{ params: { id: string } }> = async ({ params }) => {
 	const cookieStore = cookies();
-	const doneList = JSON.parse(cookieStore.get("doneList")?.value || "[]") as string[];
+	const doneList = JSON.parse<string[]>(cookieStore.get("doneList")?.value || "[]");
 	const memo = cookieStore.get(params.id)?.value || "";
 	return Fetcher.get<ITodo>(`/todos/${params.id}`)
 		.then(async (effect) => {

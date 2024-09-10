@@ -10,8 +10,8 @@
 		"ncu": "npx npm-check-updates -u & npm install"
 	},
 	"dependencies": {
-		"effect": "^3.6.5",
-		"next": "14.2.6",
+		"effect": "^3.7.2",
+		"next": "14.2.8",
 		"react": "^18",
 		"react-dom": "^18",
 		"react-hook-form": "^7.53.0",
